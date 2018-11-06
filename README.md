@@ -12,13 +12,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ### 配置
 #### 生命周期
 ```ruby
-func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-if url.host == "BigoClient" {
-//TODO:此处处理回调结果
-print("此处处理回调结果")
-}
-return true
-}
+
 ```
 #### URL Schemes
 ```ruby
@@ -28,56 +22,11 @@ LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 
 ### 下单
 ```ruby
-import BGPay
 
-let appId = "123456789"
-let mchId = "123456789"
-let nonceStr = "58685768576309403"
-let outTradeNo = "test123"
-let totalFee = "2.3456"
-let notifyUrl = "www.baidu.com"
-
-let order = BGPayOrder()
-order.appId = appId
-order.mchId = mchId
-order.nonceStr = nonceStr
-order.outTradeNo = outTradeNo
-order.totalFee =  totalFee
-order.notifyUrl = notifyUrl
-
-BGPay.shared().payOrder(order: order, scheme: "OtherApp",successCallback: { (result) in
-print(result)
-}) { (result, error) in
-print(error?.errorMessage ?? "")
-}
 ```
 ### 提现
 ```ruby
 
-import BGPay
-
-let appId = "123456789"
-let mchId = "123456789"
-let nonceStr = "58685768576309403"
-let outTradeNo = "test123"
-let totalFee = "0.01"
-let phone = "13315999725"
-let countryCode = "+86"
-
-let withDraw = BGWithDraw()
-withDraw.appId = appId
-withDraw.mchId = mchId
-withDraw.nonceStr = nonceStr
-withDraw.outTradeNo = outTradeNo
-withDraw.phone = phone
-withDraw.countryCode = countryCode
-withDraw.totalFee =  totalFee
-
-BGPay.shared().withDraw(order: withDraw, successCallback: { (result) in
-print(result)
-}) { (result, error) in
-print(error?.errorMessage ?? "")
-}
 ```
 ### 支付结果查询
 
@@ -188,7 +137,7 @@ BGPaySDK is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BGPaySDK'
+pod 'BGPay'
 ```
 
 ## Author
