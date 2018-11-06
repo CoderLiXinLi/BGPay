@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BGPay'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of BGPay.'
+  s.version          = '1.1.0'
+  s.summary          = 'BGPay支付SDK'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,26 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+集成BGPay 可以 调起 BG 客户端 进行对应币种支付
                        DESC
 
   s.homepage         = 'https://github.com/CoderLiXinLi/BGPay'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'CoderLiXinLi' => 'lilo7@sina.com' }
+  s.author           = { 'CoderLiXinLi' => 'lixinli0327@gmail.com' }
   s.source           = { :git => 'https://github.com/CoderLiXinLi/BGPay.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'BGPay/Classes/**/*'
-  
+  # s.source_files = 'BGPay/Classes/**/*'
+  s.vendored_framework = 'BGPay/Products/BGPay.framework'
+
   # s.resource_bundles = {
   #   'BGPay' => ['BGPay/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'AFNetworking'
 end

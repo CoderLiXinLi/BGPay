@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		007C46A4B45AA0E43672AC569EEC7169 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		51505FDC97DF45FE358D0CA1B6856439 /* Pods-BGPay_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEA5D9088182144F8F3B3D227E3D6F /* Pods-BGPay_Tests-dummy.m */; };
+		5C4DB6FCF67DABF89825BBCC16430511 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		66FB3FD144C2E43F18728613028159CB /* BGPay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A660427AF2735965F0DE1175597E21E /* BGPay-dummy.m */; };
+		6AE04F7795911CCE6BF4D0D2A71B9E5F /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B831869A083492192CBE801D747687 /* ReplaceMe.m */; };
+		870B8733BC3F9AB0449DD5C18B22E7FE /* Pods-BGPay_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A7EE3A583588BFC366D56F58037402 /* Pods-BGPay_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2F59BEBA5AFB0630A5A2D8AF1D28FD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		C1EB3AC58BA960417CA308D1B216B444 /* Pods-BGPay_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A61CD1AE6CEE2618FF5CF1531C1937E3 /* Pods-BGPay_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE5452F257C474F37778FB5E0DFF6B5A /* BGPay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC1807C0C4404BBC91BBC254D2FAF5A /* BGPay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED969933FE7990EE014C36173CD8D569 /* Pods-BGPay_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13DA59E6FE68D996825572041B80C5 /* Pods-BGPay_Example-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D8675FFF09934B8986F1DAD61458C83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E703B920E19D93452213D19876479655;
+			remoteInfo = BGPay;
+		};
+		A62FFD250C709E077E91C60F3D769750 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B95540A30363F947E5F994A94B3B338;
+			remoteInfo = "Pods-BGPay_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A660427AF2735965F0DE1175597E21E /* BGPay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BGPay-dummy.m"; sourceTree = "<group>"; };
+		1733763C9A46F12320AD7765B9939B62 /* Pods-BGPay_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BGPay_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2BE842FA4DD7F1D206DB3685E4F66B94 /* Pods-BGPay_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BGPay_Example-resources.sh"; sourceTree = "<group>"; };
+		34A631A34DB65A8C103C30EF13D041B6 /* Pods_BGPay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BGPay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D92F666698D95FFCC706EA34CDD2197 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		496DD70E408C3C7B3E492E6E3B7FCF21 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A13DA59E6FE68D996825572041B80C5 /* Pods-BGPay_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BGPay_Example-dummy.m"; sourceTree = "<group>"; };
+		50B831869A083492192CBE801D747687 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = BGPay/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5E881C236C55801A5853A1857191487D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6845C1D09450FE86BA43B295B7CCFB4C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EC1807C0C4404BBC91BBC254D2FAF5A /* BGPay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BGPay-umbrella.h"; sourceTree = "<group>"; };
+		76A7EE3A583588BFC366D56F58037402 /* Pods-BGPay_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BGPay_Example-umbrella.h"; sourceTree = "<group>"; };
+		7A1C025E82BAC6822B711E1EA94E2584 /* Pods-BGPay_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BGPay_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7CDC56AA5108E8D52A88214D4BE2FAE7 /* BGPay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BGPay.modulemap; sourceTree = "<group>"; };
+		8BFF0F0AC1BC235F7463318DF65F5251 /* Pods-BGPay_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BGPay_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3993C5F103DDFEFDA625766E07536AC /* Pods-BGPay_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BGPay_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A61CD1AE6CEE2618FF5CF1531C1937E3 /* Pods-BGPay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BGPay_Tests-umbrella.h"; sourceTree = "<group>"; };
+		BA76E328BC6806CBAEEA2CFF96450D18 /* Pods-BGPay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BGPay_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BBDBA6EB22DDB1BC696D6D675D5D3418 /* Pods-BGPay_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BGPay_Tests.modulemap"; sourceTree = "<group>"; };
+		C0A99D5D201629FF9C6FCEEB8F505A83 /* Pods-BGPay_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BGPay_Tests-resources.sh"; sourceTree = "<group>"; };
+		C18D78EF04EEEBC3D145879E32DD60DD /* Pods-BGPay_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BGPay_Example.modulemap"; sourceTree = "<group>"; };
+		C37EC4080B2CE4A69F149A79D4542531 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CE36C6A4720D7BE43CC4B95CF3A5F5D7 /* BGPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BGPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32F27821ABDDCD81D97188E2CAAE9CF /* Pods-BGPay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BGPay_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D4A49E5AB51EB9C448E87653F08A7B39 /* Pods-BGPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BGPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7EEA5D9088182144F8F3B3D227E3D6F /* Pods-BGPay_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BGPay_Tests-dummy.m"; sourceTree = "<group>"; };
+		DA889B2434F5C7FAEA51C1AB6F09EB5B /* Pods-BGPay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BGPay_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DFE92851843C4577BE98938752891D2E /* Pods-BGPay_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BGPay_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		E0BB3AFF9CC21A9B04CF2BE31055D77A /* BGPay.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = BGPay.podspec; sourceTree = "<group>"; };
+		E95BC42E96E5F7DADBD69C25B0C9DC83 /* Pods_BGPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BGPay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CDC45E17EB343003AC926C8C59A993 /* BGPay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BGPay-prefix.pch"; sourceTree = "<group>"; };
+		F5EB80C83AFB81AE626AC0BBD81B5A06 /* Pods-BGPay_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BGPay_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FDBC69778B49DBF2895B9EF9AB91BE94 /* BGPay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BGPay.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25344D24AAEB9B6747AB7D74DB9ED8B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2F59BEBA5AFB0630A5A2D8AF1D28FD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2948FF9C5CA144CF1E11230A3970B316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				007C46A4B45AA0E43672AC569EEC7169 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ECE8E9F7BB4A0EA4F8E815EF99B084F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C4DB6FCF67DABF89825BBCC16430511 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A9807177B4DB91DB82E2F0D8A749079 /* Pods-BGPay_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5E881C236C55801A5853A1857191487D /* Info.plist */,
+				BBDBA6EB22DDB1BC696D6D675D5D3418 /* Pods-BGPay_Tests.modulemap */,
+				F5EB80C83AFB81AE626AC0BBD81B5A06 /* Pods-BGPay_Tests-acknowledgements.markdown */,
+				1733763C9A46F12320AD7765B9939B62 /* Pods-BGPay_Tests-acknowledgements.plist */,
+				D7EEA5D9088182144F8F3B3D227E3D6F /* Pods-BGPay_Tests-dummy.m */,
+				8BFF0F0AC1BC235F7463318DF65F5251 /* Pods-BGPay_Tests-frameworks.sh */,
+				C0A99D5D201629FF9C6FCEEB8F505A83 /* Pods-BGPay_Tests-resources.sh */,
+				A61CD1AE6CEE2618FF5CF1531C1937E3 /* Pods-BGPay_Tests-umbrella.h */,
+				D4A49E5AB51EB9C448E87653F08A7B39 /* Pods-BGPay_Tests.debug.xcconfig */,
+				DA889B2434F5C7FAEA51C1AB6F09EB5B /* Pods-BGPay_Tests.release.xcconfig */,
+			);
+			name = "Pods-BGPay_Tests";
+			path = "Target Support Files/Pods-BGPay_Tests";
+			sourceTree = "<group>";
+		};
+		295BE3B41A5CCD3BF08C9CB56842219F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE36C6A4720D7BE43CC4B95CF3A5F5D7 /* BGPay.framework */,
+				34A631A34DB65A8C103C30EF13D041B6 /* Pods_BGPay_Example.framework */,
+				E95BC42E96E5F7DADBD69C25B0C9DC83 /* Pods_BGPay_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6BBBBB8B560E50167B2F17E2103EFC3D /* Pods-BGPay_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6845C1D09450FE86BA43B295B7CCFB4C /* Info.plist */,
+				C18D78EF04EEEBC3D145879E32DD60DD /* Pods-BGPay_Example.modulemap */,
+				7A1C025E82BAC6822B711E1EA94E2584 /* Pods-BGPay_Example-acknowledgements.markdown */,
+				DFE92851843C4577BE98938752891D2E /* Pods-BGPay_Example-acknowledgements.plist */,
+				4A13DA59E6FE68D996825572041B80C5 /* Pods-BGPay_Example-dummy.m */,
+				A3993C5F103DDFEFDA625766E07536AC /* Pods-BGPay_Example-frameworks.sh */,
+				2BE842FA4DD7F1D206DB3685E4F66B94 /* Pods-BGPay_Example-resources.sh */,
+				76A7EE3A583588BFC366D56F58037402 /* Pods-BGPay_Example-umbrella.h */,
+				BA76E328BC6806CBAEEA2CFF96450D18 /* Pods-BGPay_Example.debug.xcconfig */,
+				D32F27821ABDDCD81D97188E2CAAE9CF /* Pods-BGPay_Example.release.xcconfig */,
+			);
+			name = "Pods-BGPay_Example";
+			path = "Target Support Files/Pods-BGPay_Example";
+			sourceTree = "<group>";
+		};
+		70BB7165CDABB66B88F11E91734BA225 /* BGPay */ = {
+			isa = PBXGroup;
+			children = (
+				50B831869A083492192CBE801D747687 /* ReplaceMe.m */,
+				7D30EC31A9B52EE8AC1C1261AECE6ED0 /* Pod */,
+				C435DF69F2C4093487B27A275A271148 /* Support Files */,
+			);
+			name = BGPay;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7D30EC31A9B52EE8AC1C1261AECE6ED0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E0BB3AFF9CC21A9B04CF2BE31055D77A /* BGPay.podspec */,
+				3D92F666698D95FFCC706EA34CDD2197 /* LICENSE */,
+				C37EC4080B2CE4A69F149A79D4542531 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				C489FA4B5FDC2FE321A05B6357C968EF /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				295BE3B41A5CCD3BF08C9CB56842219F /* Products */,
+				AEC9588C1BA332CE0CAD452C9C0044B0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AEC9588C1BA332CE0CAD452C9C0044B0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BBBBB8B560E50167B2F17E2103EFC3D /* Pods-BGPay_Example */,
+				0A9807177B4DB91DB82E2F0D8A749079 /* Pods-BGPay_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C435DF69F2C4093487B27A275A271148 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CDC56AA5108E8D52A88214D4BE2FAE7 /* BGPay.modulemap */,
+				FDBC69778B49DBF2895B9EF9AB91BE94 /* BGPay.xcconfig */,
+				0A660427AF2735965F0DE1175597E21E /* BGPay-dummy.m */,
+				F5CDC45E17EB343003AC926C8C59A993 /* BGPay-prefix.pch */,
+				6EC1807C0C4404BBC91BBC254D2FAF5A /* BGPay-umbrella.h */,
+				496DD70E408C3C7B3E492E6E3B7FCF21 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BGPay";
+			sourceTree = "<group>";
+		};
+		C489FA4B5FDC2FE321A05B6357C968EF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70BB7165CDABB66B88F11E91734BA225 /* BGPay */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		42CF43C8EF4A028220BC9997241ACEC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				870B8733BC3F9AB0449DD5C18B22E7FE /* Pods-BGPay_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B51CF652118E9DFD1DD6261C80DD0523 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1EB3AC58BA960417CA308D1B216B444 /* Pods-BGPay_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C431464F8F6C3E8865F7088541A394C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE5452F257C474F37778FB5E0DFF6B5A /* BGPay-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7B95540A30363F947E5F994A94B3B338 /* Pods-BGPay_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D0C4795486FE51EC525CADC949EF8A1 /* Build configuration list for PBXNativeTarget "Pods-BGPay_Example" */;
+			buildPhases = (
+				42CF43C8EF4A028220BC9997241ACEC4 /* Headers */,
+				E04D0447390F0D868691153C6683B1D8 /* Sources */,
+				25344D24AAEB9B6747AB7D74DB9ED8B1 /* Frameworks */,
+				FCFE0BBF03F675908C67368B9825274A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9828577A7D13A5E6B3D74D4E90007C7 /* PBXTargetDependency */,
+			);
+			name = "Pods-BGPay_Example";
+			productName = "Pods-BGPay_Example";
+			productReference = 34A631A34DB65A8C103C30EF13D041B6 /* Pods_BGPay_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8DD35A1E9F2374BE1D9B70CD31B7B55A /* Pods-BGPay_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB4D7BBDE57F31853DD1C4C1E70916E3 /* Build configuration list for PBXNativeTarget "Pods-BGPay_Tests" */;
+			buildPhases = (
+				B51CF652118E9DFD1DD6261C80DD0523 /* Headers */,
+				D9F31508CC1A901B2B2BD0F6CCADA376 /* Sources */,
+				2948FF9C5CA144CF1E11230A3970B316 /* Frameworks */,
+				5B6024DE8DF1C956D552F808D3D9231B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AC3C918A31B31348366B928B667EFF6 /* PBXTargetDependency */,
+			);
+			name = "Pods-BGPay_Tests";
+			productName = "Pods-BGPay_Tests";
+			productReference = E95BC42E96E5F7DADBD69C25B0C9DC83 /* Pods_BGPay_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E703B920E19D93452213D19876479655 /* BGPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9CE01E6F5248A49B471BEAB5D5D3D65 /* Build configuration list for PBXNativeTarget "BGPay" */;
+			buildPhases = (
+				C431464F8F6C3E8865F7088541A394C0 /* Headers */,
+				8F96687510A6AF24E0D1F594346E3464 /* Sources */,
+				7ECE8E9F7BB4A0EA4F8E815EF99B084F /* Frameworks */,
+				38E0FBCDAF3E9E15D9D8F1D36D0AD185 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BGPay;
+			productName = BGPay;
+			productReference = CE36C6A4720D7BE43CC4B95CF3A5F5D7 /* BGPay.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 295BE3B41A5CCD3BF08C9CB56842219F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E703B920E19D93452213D19876479655 /* BGPay */,
+				7B95540A30363F947E5F994A94B3B338 /* Pods-BGPay_Example */,
+				8DD35A1E9F2374BE1D9B70CD31B7B55A /* Pods-BGPay_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38E0FBCDAF3E9E15D9D8F1D36D0AD185 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B6024DE8DF1C956D552F808D3D9231B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCFE0BBF03F675908C67368B9825274A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F96687510A6AF24E0D1F594346E3464 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66FB3FD144C2E43F18728613028159CB /* BGPay-dummy.m in Sources */,
+				6AE04F7795911CCE6BF4D0D2A71B9E5F /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F31508CC1A901B2B2BD0F6CCADA376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51505FDC97DF45FE358D0CA1B6856439 /* Pods-BGPay_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E04D0447390F0D868691153C6683B1D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED969933FE7990EE014C36173CD8D569 /* Pods-BGPay_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AC3C918A31B31348366B928B667EFF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BGPay_Example";
+			target = 7B95540A30363F947E5F994A94B3B338 /* Pods-BGPay_Example */;
+			targetProxy = A62FFD250C709E077E91C60F3D769750 /* PBXContainerItemProxy */;
+		};
+		B9828577A7D13A5E6B3D74D4E90007C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BGPay;
+			target = E703B920E19D93452213D19876479655 /* BGPay */;
+			targetProxy = 5D8675FFF09934B8986F1DAD61458C83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		348007501110ED86DA62D2778CDBEF07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A49E5AB51EB9C448E87653F08A7B39 /* Pods-BGPay_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BGPay_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BGPay_Tests/Pods-BGPay_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		56A05ADD3BABDA1B56D1F979845809B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		845B4B6BC8B996808155F24D6FB30C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA889B2434F5C7FAEA51C1AB6F09EB5B /* Pods-BGPay_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BGPay_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BGPay_Tests/Pods-BGPay_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AC0406F6840AAAC871EDEA078C4C337F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA76E328BC6806CBAEEA2CFF96450D18 /* Pods-BGPay_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BGPay_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BGPay_Example/Pods-BGPay_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEFDB93BF207328A04F1220475D02C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C7FC58AE2550FF65363177E4E4A11643 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDBC69778B49DBF2895B9EF9AB91BE94 /* BGPay.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BGPay/BGPay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BGPay/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BGPay/BGPay.modulemap";
+				PRODUCT_MODULE_NAME = BGPay;
+				PRODUCT_NAME = BGPay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D2A1EB2DAEF9A695525F93001C94F7A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDBC69778B49DBF2895B9EF9AB91BE94 /* BGPay.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BGPay/BGPay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BGPay/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BGPay/BGPay.modulemap";
+				PRODUCT_MODULE_NAME = BGPay;
+				PRODUCT_NAME = BGPay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F8B4C0C5AABC9D26E9B68261A8304484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D32F27821ABDDCD81D97188E2CAAE9CF /* Pods-BGPay_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BGPay_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BGPay_Example/Pods-BGPay_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D0C4795486FE51EC525CADC949EF8A1 /* Build configuration list for PBXNativeTarget "Pods-BGPay_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC0406F6840AAAC871EDEA078C4C337F /* Debug */,
+				F8B4C0C5AABC9D26E9B68261A8304484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEFDB93BF207328A04F1220475D02C3B /* Debug */,
+				56A05ADD3BABDA1B56D1F979845809B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9CE01E6F5248A49B471BEAB5D5D3D65 /* Build configuration list for PBXNativeTarget "BGPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2A1EB2DAEF9A695525F93001C94F7A5 /* Debug */,
+				C7FC58AE2550FF65363177E4E4A11643 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB4D7BBDE57F31853DD1C4C1E70916E3 /* Build configuration list for PBXNativeTarget "Pods-BGPay_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				348007501110ED86DA62D2778CDBEF07 /* Debug */,
+				845B4B6BC8B996808155F24D6FB30C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
