@@ -12,7 +12,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ### 配置
 #### 生命周期
 ```ruby
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
 
+    if ([url.host isEqualToString:@"BigoClient"]) {
+        //TODO:此处处理回调结果
+        NSLog(@"此处处理回调结果");
+    }
+
+return YES;
+}
 ```
 #### URL Schemes
 ```ruby
@@ -22,11 +30,38 @@ LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 
 ### 下单
 ```ruby
+NSString *appId = @"123456789";
+NSString *mchId = @"123456789";
+NSString *nonceStr = @"58685768576309403";
+NSString *outTradeNo = @"bg11111111";
+NSString *totalFee = @"2.456";
+NSString *notifyUrl = @"www.baidu.com";
 
+BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andTotalFee:totalFee andNotifyUrl:notifyUrl];
+
+[BGPay payOrder:order scheme:@"OtherApp" success:^(NSString *result) {
+    NSLog(@"%@",result);
+} failed:^(NSString *result, BGPayError *error) {
+    NSLog(@"%@", error.errorMessage);
+}];
 ```
 ### 提现
 ```ruby
+NSString *appId = @"123456789";
+NSString *mchId = @"123456789";
+NSString *nonceStr = @"58685768576309403";
+NSString *outTradeNo = @"bg11111111";
+NSString *phone = @"13315999725";
+NSString *countryCode = @"+86";
+NSString *totalFee = @"2.3456";
 
+BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andPhone:phone andCountryCode:countryCode andTotalFee:totalFee];
+
+[BGPay withDraw:withDraw success:^(NSString *result) {
+    NSLog(@"%@",result);
+} failed:^(NSString *result, BGPayError *error) {
+    NSLog(@"%@",error.errorMessage);
+}];
 ```
 ### 支付结果查询
 
@@ -36,7 +71,7 @@ LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 
 **请求URL：** 
 - ` http://www.bgex.top/v2/s/pay/getOrder`
-
+- http://www.bgex.top/v2/s/pay/getOrder?appId=123456789&mchId=123456789&outTradeNo=bg12689329
 **请求方式：**
 - POST 
 
@@ -87,7 +122,7 @@ LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 
 **请求URL：** 
 - ` http://www.bgex.top/v2/s/gameWithdrawOrder/getWithdraw`
-
+- http://www.bgex.top/v2/s/gameWithdrawOrder/getWithdraw?appId=123456789&mchId=123456789&outTradeNo=bg12689329
 **请求方式：**
 - GET 
 
