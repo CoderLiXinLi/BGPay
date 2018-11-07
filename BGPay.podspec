@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  # s.source_files = 'BGPay/Classes/**/*'
+  s.source_files = 'BGPay/Classes/**/*.h'
   s.vendored_framework = 'BGPay/Products/BGPay.framework'
 
   # s.resource_bundles = {

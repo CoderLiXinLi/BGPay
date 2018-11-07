@@ -1,15 +1,36 @@
 PODS:
-  - BGPay (0.1.0)
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - BGPay (1.1.0):
+    - AFNetworking
 
 DEPENDENCIES:
   - BGPay (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
 
 EXTERNAL SOURCES:
   BGPay:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BGPay: 741920017ae1f20b428782c245c47556f2ed05a0
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BGPay: d1e9686b702f315186177f103e5368765810dbd7
 
 PODFILE CHECKSUM: 05c4feb1579af69c807b95cec12a3f78fc0817ad
 
