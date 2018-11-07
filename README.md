@@ -71,7 +71,7 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 
 **请求URL：** 
 - ` http://www.bgex.top/v2/s/pay/getOrder`
-- http://www.bgex.top/v2/s/pay/getOrder?appId=123456789&mchId=123456789&outTradeNo=bg12689329
+-  例子:http://www.bgex.top/v2/s/pay/getOrder?appId=123456789&mchId=123456789&outTradeNo=bg12689329
 
 **请求方式：**
 - POST 
@@ -123,7 +123,7 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 
 **请求URL：** 
 - ` http://www.bgex.top/v2/s/gameWithdrawOrder/getWithdraw`
-- http://www.bgex.top/v2/s/gameWithdrawOrder/getWithdraw?appId=123456789&mchId=123456789&outTradeNo=bg12689329
+-  例子:http://www.bgex.top/v2/s/gameWithdrawOrder/getWithdraw?appId=123456789&mchId=123456789&outTradeNo=bg12689329
 
 **请求方式：**
 - GET 
