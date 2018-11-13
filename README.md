@@ -24,11 +24,42 @@ return YES;
 ```
 #### URL Schemes
 ```ruby
-URL Schemes "OtherApp"
+URL Schemes "创建APP Scheme"
 LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 ```
 
-### 下单
+### 统一下单
+
+**应用场景：** 
+- 商户系统先调用该接口在BGSDK生成预支付交易单，成功之后调起BG客户端,并可以在线支付,失败后返回对应的错误信息。
+
+**方法：**
++ (void)payOrder:(BGOrder *)order scheme: (NSString *)formsScheme success: (successBlock)successBlock failed: (failBlock)failBlock;
+
+**参数：** 
+#### order
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|appId |是  |string |应用ID   |
+|mchId |是  |string | 商户号    |
+|nonceStr        |是  |string | 随机字符串    |
+|outTradeNo        |是  |string | 商户订单号    |
+|totalFee        |是  |string | 总金额    |
+|notifyUrl       |否  |string | 通知地址    |
+
+#### scheme
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|formsScheme |是  |string |应用Scheme   |
+
+**返回参数说明** 
+
+|参数名|类型|说明|
+|:-----  |:-----|-----                           |
+|result  |String    |参数格式校验错误  |
+|error  |BGPayError    |错误信息  |
+
+
 ```ruby
 NSString *appId = @"123456789";
 NSString *mchId = @"123456789";
@@ -46,6 +77,33 @@ BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceS
 }];
 ```
 ### 提现
+
+**应用场景：** 
+- 商户系统调用该接口在BG服务后台进行货币提现操作。
+
+**方法：**
++ (void)withDraw:(BGWithDraw *)withDraw success: (successBlock)successBlock failed: (failBlock)failBlock;
+
+**参数：** 
+#### withDraw
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|appId |是  |string |应用ID   |
+|mchId |是  |string | 商户号    |
+|nonceStr        |是  |string | 随机字符串    |
+|outTradeNo        |是  |string | 商户订单号    |
+|phone       |是  |string | 手机号    |
+|countryCode       |是  |string | 国际电话区号    |
+|totalFee        |是  |string | 总金额    |
+
+**返回参数说明** 
+
+|参数名|类型|说明|
+|:-----  |:-----|-----                           |
+|result  |String    |参数格式校验错误  |
+|error  |BGPayError    |错误信息  |
+
+
 ```ruby
 NSString *appId = @"123456789";
 NSString *mchId = @"123456789";
@@ -71,7 +129,7 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 
 **请求URL：** 
 - ` http://www.bgex.top/v2/s/pay/getOrder`
--  例子:http://www.bgex.top/v2/s/pay/getOrder?appId=123456789&mchId=123456789&outTradeNo=bg12689329
+-  example:http://www.bgex.top/v2/s/pay/getOrder?appId=123456789&mchId=123456789&outTradeNo=bg12689329
 
 **请求方式：**
 - POST 
@@ -123,7 +181,7 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 
 **请求URL：** 
 - ` http://www.bgex.top/v2/s/gameWithdrawOrder/getWithdraw`
--  例子:http://www.bgex.top/v2/s/gameWithdrawOrder/getWithdraw?appId=123456789&mchId=123456789&outTradeNo=bg12689329
+-  example:http://www.bgex.top/v2/s/gameWithdrawOrder/getWithdraw?appId=123456789&mchId=123456789&outTradeNo=bg12689329
 
 **请求方式：**
 - GET 
