@@ -45,9 +45,6 @@ URL Schemes "创建APP Scheme"
 LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 ```
 
-#### 签名规则
-点击这里查看 [Sign文档](http://showdoc.bg.ink/web/#/14?page_id=19). 
-
 ### 统一下单
 
 **应用场景：** 
@@ -66,7 +63,7 @@ LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 |outTradeNo        |是  |string | 商户订单号    |
 |totalFee        |是  |string | 总金额    |
 |notifyUrl       |否  |string | 通知地址    |
-|sign       |是  |string | 签名信息    |
+|sign       |是 |  string | [签名算法](http://showdoc.bg.ink/web/#/14 "签名算法")    |
 
 #### scheme
 |参数名|必选|类型|说明|
@@ -119,7 +116,7 @@ BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceS
 |phone       |是  |string | 手机号    |
 |countryCode       |是  |string | 国际电话区号    |
 |totalFee        |是  |string | 总金额    |
-|sign       |是  |string | 签名信息    |
+|sign       |是 |  string | [签名算法](http://showdoc.bg.ink/web/#/14 "签名算法")    |
 
 **返回参数说明** 
 
