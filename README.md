@@ -9,6 +9,23 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Installation
+### Installation with CocoaPods
+BGPaySDK is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'BGPay'
+```
+### Manually
+下载依赖库[地址](https://github.com/CoderLiXinLi/BGPay/tree/master/Lib "依赖库地址").
+```ruby
+需要添加下面两个依赖库到 Embedded Binaries
+```
+**依赖framework：**
+- AFNetworking.framework
+- BGPay.framework
+
 ### 配置
 #### 生命周期
 ```ruby
@@ -28,6 +45,9 @@ URL Schemes "创建APP Scheme"
 LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 ```
 
+#### 签名规则
+点击这里查看 [Sign文档](http://showdoc.bg.ink/web/#/14?page_id=19). 
+
 ### 统一下单
 
 **应用场景：** 
@@ -46,6 +66,7 @@ LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 |outTradeNo        |是  |string | 商户订单号    |
 |totalFee        |是  |string | 总金额    |
 |notifyUrl       |否  |string | 通知地址    |
+|sign       |是  |string | 签名信息    |
 
 #### scheme
 |参数名|必选|类型|说明|
@@ -61,19 +82,22 @@ LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 
 
 ```ruby
-NSString *appId = @"123456789";
-NSString *mchId = @"123456789";
-NSString *nonceStr = @"58685768576309403";
-NSString *outTradeNo = @"bg11111111";
-NSString *totalFee = @"2.456";
-NSString *notifyUrl = @"www.baidu.com";
+NSString *appId = @"1056362713403392003";
+NSString *mchId = @"1039540523250823273";
+NSString *nonceStr = @"123456789";
+NSString *outTradeNo = @"bgTest123456789";
+NSString *totalFee = @"10";
+NSString *notifyUrl = @"http://192.168.1.108:7076/pay/getOrder";
+/// 签名信息
+NSString *sign = @"C0B7FD10085EBCD065957B72E68CA1E6";
 
-BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andTotalFee:totalFee andNotifyUrl:notifyUrl];
+BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andTotalFee:totalFee andSign:sign andNotifyUrl:notifyUrl];
 
 [BGPay payOrder:order scheme:@"OtherApp" success:^(NSString *result) {
     NSLog(@"%@",result);
 } failed:^(NSString *result, BGPayError *error) {
-    NSLog(@"%@", error.errorMessage);
+    NSLog(@"%ld", (long)error.errorCode);
+    NSLog(@"%@",error.errorMessage);
 }];
 ```
 ### 提现
@@ -95,6 +119,7 @@ BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceS
 |phone       |是  |string | 手机号    |
 |countryCode       |是  |string | 国际电话区号    |
 |totalFee        |是  |string | 总金额    |
+|sign       |是  |string | 签名信息    |
 
 **返回参数说明** 
 
@@ -105,19 +130,22 @@ BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceS
 
 
 ```ruby
-NSString *appId = @"123456789";
-NSString *mchId = @"123456789";
-NSString *nonceStr = @"58685768576309403";
-NSString *outTradeNo = @"bg11111111";
-NSString *phone = @"13315999725";
+NSString *appId = @"1056362713403392003";
+NSString *mchId = @"1039540523250823273";
+NSString *nonceStr = @"1234567890";
+NSString *outTradeNo = @"bgW123456789";
+NSString *totalFee = @"1.23";
+NSString *phone = @"18730160317";
 NSString *countryCode = @"+86";
-NSString *totalFee = @"2.3456";
+/// 签名信息
+NSString *sign = @"EF94B11B03D55D6AC916FCF3C5356E74";
 
-BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andPhone:phone andCountryCode:countryCode andTotalFee:totalFee];
+BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andPhone:phone andCountryCode:countryCode andTotalFee:totalFee andSign:sign];
 
 [BGPay withDraw:withDraw success:^(NSString *result) {
     NSLog(@"%@",result);
 } failed:^(NSString *result, BGPayError *error) {
+    NSLog(@"%ld", (long)error.errorCode);
     NSLog(@"%@",error.errorMessage);
 }];
 ```
@@ -132,7 +160,7 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 -  example:http://www.bgex.top/v2/s/pay/getOrder?appId=123456789&mchId=123456789&outTradeNo=bg12689329
 
 **请求方式：**
-- POST 
+- GET 
 
 **请求数据格式：**
 - JSON 
@@ -193,16 +221,6 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 |:-----  |:-----|-----                           |
 |return_code  |String    |此字段是通信标识，非交易标识，交易是否成功需要查看result_code来判断  |
 |return_msg  |String    |参数格式校验错误  |
-
-
-## Installation
-
-BGPaySDK is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'BGPay'
-```
 
 ## Author
 
