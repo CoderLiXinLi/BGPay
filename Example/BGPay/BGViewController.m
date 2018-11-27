@@ -45,11 +45,11 @@ typedef enum : NSInteger {
 - (IBAction)orderClick:(UIButton *)sender
 {
     NSString *appId = @"1056362713403392003";
-    NSString *mchId = @"123456789";
+    NSString *mchId = @"1039540523250823273";
     NSString *nonceStr = @"123456789";
     NSString *outTradeNo = @"bgTest123456789";
-    NSString *totalFee = @"10.23";
-    NSString *notifyUrl = @"www.baidu.com";
+    NSString *totalFee = @"10";
+    NSString *notifyUrl = @"http://47.75.112.14:7076/pay/getOrder";
     /// 签名信息
     NSString *sign = @"C0B7FD10085EBCD065957B72E68CA1E6";
     
@@ -66,14 +66,14 @@ typedef enum : NSInteger {
 - (IBAction)withDrawClick:(UIButton *)sender
 {
     NSString *appId = @"1056362713403392003";
-    NSString *mchId = @"123456789";
-    NSString *nonceStr = @"123456789";
-    NSString *outTradeNo = @"bgTest123456789";
-    NSString *totalFee = @"10.23";
-    NSString *phone = @"13315999725";
+    NSString *mchId = @"1039540523250823273";
+    NSString *nonceStr = @"1234567890";
+    NSString *outTradeNo = @"bgW123456789";
+    NSString *totalFee = @"1.23";
+    NSString *phone = @"18730160317";
     NSString *countryCode = @"+86";
     /// 签名信息
-    NSString *sign = @"C0B7FD10085EBCD065957B72E68CA1E6";
+    NSString *sign = @"EF94B11B03D55D6AC916FCF3C5356E74";
     
     BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andPhone:phone andCountryCode:countryCode andTotalFee:totalFee andSign:sign];
     
@@ -91,11 +91,6 @@ typedef enum : NSInteger {
 	
     self.title = @"BGSDK";
     [BGPay setDebug];
-    
-    TestPayError *error = [[TestPayError alloc] init];
-    error.errorCode = TEST1Error;
-    error.errorMessage = @"tese";
-    NSLog(@"%@",error);
 }
 
 @end

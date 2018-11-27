@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - BGPay (1.2.0):
+  - BGPay (1.2.1):
     - AFNetworking
 
 DEPENDENCIES:
@@ -30,7 +30,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  BGPay: dfb27543f71cd7eb8cf34178a6fa1cef8970b3e5
+  BGPay: 0499641318e8417d33c699872f1eb8456bcecea9
 
 PODFILE CHECKSUM: 05c4feb1579af69c807b95cec12a3f78fc0817ad
 
