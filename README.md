@@ -181,7 +181,7 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 
 |参数名|类型|说明|
 |:-----  |:-----|-----                           |
-|return_code  |String    |此字段是通信标识，非交易标识，交易是否成功需要查看result_code来判断  |
+|return_code  |String    |此字段是通信标识，非交易标识，交易是否成功需要查看result_code（为0则是正确）来判断  |
 |return_msg  |String    |参数格式校验错误  |
 **备注**
 **错误码** 
@@ -216,7 +216,7 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 
 |参数名|类型|说明|
 |:-----  |:-----|-----                           |
-|return_code  |String    |此字段是通信标识，非交易标识，交易是否成功需要查看result_code来判断  |
+|return_code  |String    |此字段是通信标识，非交易标识，交易是否成功需要查看result_code（为0则是正确）来判断  |
 |return_msg  |String    |参数格式校验错误  |
 
 ## Author
