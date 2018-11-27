@@ -1,6 +1,6 @@
 {
   "name": "BGPay",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "summary": "BGPay支付SDK",
   "description": "集成BGPay 可以 调起 BG 客户端 进行对应币种支付",
   "homepage": "https://github.com/CoderLiXinLi/BGPay",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/CoderLiXinLi/BGPay.git",
-    "tag": "1.1.0"
+    "tag": "1.2.0"
   },
   "platforms": {
     "ios": "9.0"

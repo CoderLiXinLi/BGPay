@@ -25,8 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) NSString *countryCode;
 /// NOTE:总金额
 @property(nonatomic,copy) NSString *totalFee;
+/// NOTE:签名信息
+@property(nonatomic,copy) NSString *sign;
 
-+ (instancetype)withDrawWithAppId:(NSString *)appId andMchId:(NSString *)mchId andNonceStr:(NSString *)nonceStr andOutTradeNo:(NSString *)outTradeNo andPhone:(NSString *)phone andCountryCode:(NSString *)countryCode andTotalFee:(NSString *)totalFee;
++ (instancetype)withDrawWithAppId:(NSString *)appId andMchId:(NSString *)mchId andNonceStr:(NSString *)nonceStr andOutTradeNo:(NSString *)outTradeNo andPhone:(NSString *)phone andCountryCode:(NSString *)countryCode andTotalFee:(NSString *)totalFee andSign:(NSString *)sign;
     
 @end
 

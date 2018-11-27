@@ -21,10 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) NSString *outTradeNo;
 /// NOTE:总金额
 @property(nonatomic,copy) NSString *totalFee;
+/// NOTE:签名信息
+@property(nonatomic,copy) NSString *sign;
 /// NOTE:通知地址
 @property(nonatomic,copy) NSString *notifyUrl;
     
-+ (instancetype)orderWithAppId:(NSString *)appId andMchId:(NSString *)mchId andNonceStr:(NSString *)nonceStr andOutTradeNo:(NSString *)outTradeNo andTotalFee:(NSString *)totalFee andNotifyUrl:(NSString *)notifyUrl;
++ (instancetype)orderWithAppId:(NSString *)appId andMchId:(NSString *)mchId andNonceStr:(NSString *)nonceStr andOutTradeNo:(NSString *)outTradeNo andTotalFee:(NSString *)totalFee andSign:(NSString *)sign andNotifyUrl:(NSString *)notifyUrl;
     
 @end
 
