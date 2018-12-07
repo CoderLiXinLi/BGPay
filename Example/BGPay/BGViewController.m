@@ -9,6 +9,7 @@
 #import "BGViewController.h"
 //#import "BGPay.h"
 #import <BGPay/BGPay.h>
+#import "NSString+Formmate.h"
 
 @interface BGViewController ()
 
@@ -18,16 +19,21 @@
 
 - (IBAction)orderClick:(UIButton *)sender
 {
-    NSString *appId = @"1056362713403392003";
-    NSString *mchId = @"1039540523250823273";
-    NSString *nonceStr = @"123456789";
-    NSString *outTradeNo = @"bgTest123456789";
+    NSString *appId = @"1056362713403392002";
+    NSString *mchId = @"123456789";
+    NSString *nonceStr = @"1234567890";
+    NSString *outTradeNo = @"201812031530292177781207011";
     NSString *totalFee = @"10";
-    NSString *notifyUrl = @"http://192.168.1.108:7076/pay/getOrder";
-    /// 签名信息
-    NSString *sign = @"C0B7FD10085EBCD065957B72E68CA1E6";
+    NSString *notifyUrl = @"http://47.75.112.14:7076/pay/getOrder";
     
-    BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andTotalFee:totalFee andSign:sign andNotifyUrl:notifyUrl];
+    NSDictionary *param = [[NSDictionary alloc] initWithObjectsAndKeys:appId, @"appId",mchId, @"mchId",nonceStr, @"nonceStr",outTradeNo, @"outTradeNo",totalFee, @"totalFee",notifyUrl, @"notifyUrl", nil];
+
+    /// 签名信息
+    NSString *key = @"xxxx";
+    NSString *sign = [NSString getSign:param key:key];
+    NSLog(@"%@",sign);
+    
+    BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andTotalFee:totalFee andSign:sign andNotifyUrl:@""];
     
     [BGPay payOrder:order scheme:@"OtherApp" success:^(NSString *result) {
         NSLog(@"%@",result);
