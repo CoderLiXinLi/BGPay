@@ -9,6 +9,11 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Usage
+
+**最低支持版本**
+- >= iOS 8.0
+
 ## Installation
 ### Installation with CocoaPods
 BGPaySDK is available through [CocoaPods](https://cocoapods.org). To install
@@ -34,6 +39,16 @@ pod 'BGPay'
     if ([url.host isEqualToString:@"BigoClient"]) {
         //TODO:此处处理回调结果
         NSLog(@"此处处理回调结果");
+        NSString *appId = @"1056362713403392002";
+        NSString *mchId = @"123456789";
+        NSString *outTradeNo = @"201812031530292177781207011";
+        
+        [BGPay getPayOrderWithAppId:appId andMchId:mchId andOutTradeNo:outTradeNo success:^(NSString *result) {
+        NSLog(@"%@",result);
+        } failed:^(NSString *result, BGPayError *error) {
+        NSLog(@"%ld", (long)error.errorCode);
+        NSLog(@"%@",error.errorMessage);
+        }];
     }
 
 return YES;
@@ -152,37 +167,38 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 
 - 该接口提供所有BG支付订单的查询，商户可以通过该接口主动查询订单状态，完成下一步的业务逻辑。
 
-**请求URL：** 
-- ` http://www.bgex.top/v2/s/pay/getOrder`
--  example:http://www.bgex.top/v2/s/pay/getOrder?appId=123456789&mchId=123456789&outTradeNo=bg12689329
-
-**请求方式：**
-- GET 
-
-**请求数据格式：**
-- JSON 
-
+**方法：**
++ (void)getPayOrderWithAppId:(NSString *)appId andMchId:(NSString *)mchId andOutTradeNo:(NSString *)outTradeNo success: (successBlock)successBlock failed: (failBlock)failBlock;
 
 
 **参数：** 
-
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
 |appId |是  |string |应用ID   |
 |mchId |是  |string | 商户号    |
-|outTradeNo       |是  |string | 商户订单号    |
-
-
-
-
-
+|outTradeNo        |是  |string | 商户订单号    |
 
 **返回参数说明** 
-
 |参数名|类型|说明|
 |:-----  |:-----|-----                           |
 |return_code  |String    |此字段是通信标识，非交易标识，交易是否成功需要查看result_code（为0则是正确）来判断  |
 |return_msg  |String    |参数格式校验错误  |
+
+
+```ruby
+
+NSString *appId = @"1056362713403392003";
+NSString *mchId = @"1039540523250823273";
+NSString *outTradeNo = @"bgW123456789";
+
+[BGPay getPayOrderWithAppId:appId andMchId:mchId andOutTradeNo:outTradeNo success:^(NSString *result) {
+    NSLog(@"%@",result);
+} failed:^(NSString *result, BGPayError *error) {
+    NSLog(@"%ld", (long)error.errorCode);
+    NSLog(@"%@",error.errorMessage);
+}];
+```
+
 
 ### 提现结果查询
 
@@ -190,25 +206,16 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 
 - 该接口提供第三方BG提现的结果查询，商户可以通过该接口主动查询提现状态，完成下一步的业务逻辑。
 
-**请求URL：** 
-- ` http://www.bgex.top/v2/s/gameWithdrawOrder/getWithdraw`
--  example:http://www.bgex.top/v2/s/gameWithdrawOrder/getWithdraw?appId=123456789&mchId=123456789&outTradeNo=bg12689329
-
-**请求方式：**
-- GET 
-
-**请求数据格式：**
-- JSON 
-
+**方法：**
++ (void)getWithDrawWithAppId:(NSString *)appId andMchId:(NSString *)mchId andOutTradeNo:(NSString *)outTradeNo success: (successBlock)successBlock failed: (failBlock)failBlock;
 
 
 **参数：** 
-
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
 |appId |是  |string |应用ID   |
 |mchId |是  |string | 商户号    |
-|outTradeNo       |是  |string | 商户提现订单号    |
+|outTradeNo        |是  |string | 商户订单号    |
 
 **返回参数说明** 
 
@@ -216,6 +223,22 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 |:-----  |:-----|-----                           |
 |return_code  |String    |此字段是通信标识，非交易标识，交易是否成功需要查看result_code（为0则是正确）来判断  |
 |return_msg  |String    |参数格式校验错误  |
+
+
+```ruby
+
+NSString *appId = @"1056362713403392003";
+NSString *mchId = @"1039540523250823273";
+NSString *outTradeNo = @"bgW123456789";
+
+[BGPay getWithDrawWithAppId:appId andMchId:mchId andOutTradeNo:outTradeNo success:^(NSString *result) {
+    NSLog(@"%@",result);
+} failed:^(NSString *result, BGPayError *error) {
+    NSLog(@"%ld", (long)error.errorCode);
+    NSLog(@"%@",error.errorMessage);
+}];
+```
+
 
 ## Author
 
