@@ -172,6 +172,7 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 
 
 **参数：** 
+
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
 |appId |是  |string |应用ID   |
@@ -179,6 +180,7 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 |outTradeNo        |是  |string | 商户订单号    |
 
 **返回参数说明** 
+
 |参数名|类型|说明|
 |:-----  |:-----|-----                           |
 |return_code  |String    |此字段是通信标识，非交易标识，交易是否成功需要查看result_code（为0则是正确）来判断  |
@@ -211,6 +213,7 @@ NSString *outTradeNo = @"bgW123456789";
 
 
 **参数：** 
+
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
 |appId |是  |string |应用ID   |
