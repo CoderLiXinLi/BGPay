@@ -9,7 +9,7 @@
 #import "BGViewController.h"
 //#import "BGPay.h"
 #import <BGPay/BGPay.h>
-#import "NSString+Formmate.h"
+#import "NSString+BG_Extension.h"
 
 @interface BGViewController ()
 

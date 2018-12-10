@@ -7,6 +7,7 @@
 //
 
 #import "BGAppDelegate.h"
+#import <BGPay/BGPay.h>
 
 @implementation BGAppDelegate
 
@@ -21,6 +22,16 @@
     if ([url.host isEqualToString:@"BigoClient"]) {
         //TODO:此处处理回调结果
         NSLog(@"此处处理回调结果");
+        NSString *appId = @"1056362713403392002";
+        NSString *mchId = @"123456789";
+        NSString *outTradeNo = @"201812031530292177781207011";
+        
+        [BGPay getPayOrderWithAppId:appId andMchId:mchId andOutTradeNo:outTradeNo success:^(NSString *result) {
+            NSLog(@"%@",result);
+        } failed:^(NSString *result, BGPayError *error) {
+            NSLog(@"%ld", (long)error.errorCode);
+            NSLog(@"%@",error.errorMessage);
+        }];
     }
     
     return YES;
