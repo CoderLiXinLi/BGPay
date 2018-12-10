@@ -12,7 +12,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Usage
 
 **最低支持版本**
-- >= iOS 8.0
+-  iOS >= 8.0
 
 ## Installation
 ### Installation with CocoaPods
