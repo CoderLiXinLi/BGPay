@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BGPay'
-  s.version          = '1.4.0'
+  s.version          = '1.4.1'
   s.summary          = 'BGPay支付SDK'
 
 # This description is used to generate tags and improve search results.

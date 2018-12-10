@@ -10,7 +10,6 @@
 #import "BGOrder.h"
 #import "BGWithDraw.h"
 #import "BGPayError.h"
-#import "NSString+BG_Extension.h"
 
 typedef void(^successBlock)(NSString *result);
 typedef void(^failBlock)(NSString *result, BGPayError *error);
