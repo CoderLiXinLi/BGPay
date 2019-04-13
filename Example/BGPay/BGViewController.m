@@ -9,7 +9,6 @@
 #import "BGViewController.h"
 //#import "BGPay.h"
 #import <BGPay/BGPay.h>
-#import "NSString+BG_Extension.h"
 
 @interface BGViewController ()
 
@@ -17,23 +16,39 @@
 
 @implementation BGViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.title = @"BGSDK";
+    ///NOTE: Debug
+    [BGPay setDebug];
+}
+
 - (IBAction)orderClick:(UIButton *)sender
 {
-    NSString *appId = @"1056362713403392002";
-    NSString *mchId = @"123456789";
+    NSString *pubkey = @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDsRajSERYUXn/t5N2ZB/5kH4Duu0aG9kigYIW76nGauOGytwJ5IWG2uV9+52Lj8YZtKNPMMF6je3acA4Q4waT57owKqb4Q0s7AvsACEG6VzqpUhgD66xbrbnejnGwvL1dxU3p4ZXOhh+sws6weoUKqjDRWT574fWHMvZkWZjsAhwIDAQAB";
+    
+    NSString *appId = @"1084695898372562946";
+    NSString *mchId = @"980822476815695873";
     NSString *nonceStr = @"1234567890";
-    NSString *outTradeNo = @"201812031530292177781207011";
+    NSString *outTradeNo = @"bg201812031530292177781207020";
     NSString *totalFee = @"10";
     NSString *notifyUrl = @"http://47.75.112.14:7076/pay/getOrder";
     
     NSDictionary *param = [[NSDictionary alloc] initWithObjectsAndKeys:appId, @"appId",mchId, @"mchId",nonceStr, @"nonceStr",outTradeNo, @"outTradeNo",totalFee, @"totalFee",notifyUrl, @"notifyUrl", nil];
-
-    /// 签名信息
-    NSString *key = @"xxxx";
-    NSString *sign = [NSString getSign:param key:key];
-    NSLog(@"%@",sign);
     
-    BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andTotalFee:totalFee andSign:sign andNotifyUrl:@""];
+    /// 签名信息
+    NSString *key = @"LKMHSF8WGC4FW";
+    NSString *parmStr = [BGRSATool getParam:param];
+    NSString *keySign = [NSString stringWithFormat:@"%@key=%@",parmStr,key];
+    NSString *signMd5 = [[BGRSATool md5WithStr:keySign] uppercaseString];
+    NSString *sign = [NSString stringWithFormat:@"%@sign=%@",parmStr,signMd5];
+
+    /// 得到公钥密文
+    NSString *cipherText = [BGRSATool encryptString:sign publicKey:pubkey];
+    
+    BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andCipherText:cipherText];
     
     [BGPay payOrder:order scheme:@"OtherApp" success:^(NSString *result) {
         NSLog(@"%@",result);
@@ -41,36 +56,6 @@
         NSLog(@"%ld", (long)error.errorCode);
         NSLog(@"%@",error.errorMessage);
     }];
-}
-
-- (IBAction)withDrawClick:(UIButton *)sender
-{
-    NSString *appId = @"1056362713403392003";
-    NSString *mchId = @"1039540523250823273";
-    NSString *nonceStr = @"1234567890";
-    NSString *outTradeNo = @"bgW123456789";
-    NSString *totalFee = @"1.23";
-    NSString *phone = @"18730160317";
-    NSString *countryCode = @"+86";
-    /// 签名信息
-    NSString *sign = @"EF94B11B03D55D6AC916FCF3C5356E74";
-    
-    BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andPhone:phone andCountryCode:countryCode andTotalFee:totalFee andSign:sign];
-    
-    [BGPay withDraw:withDraw success:^(NSString *result) {
-        NSLog(@"%@",result);
-    } failed:^(NSString *result, BGPayError *error) {
-        NSLog(@"%ld", (long)error.errorCode);
-        NSLog(@"%@",error.errorMessage);
-    }];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	
-    self.title = @"BGSDK";
-    [BGPay setDebug];
 }
 
 @end

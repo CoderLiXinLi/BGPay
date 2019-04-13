@@ -10,6 +10,7 @@
 #import "BGOrder.h"
 #import "BGWithDraw.h"
 #import "BGPayError.h"
+#import "BGRSATool.h"
 
 typedef void(^successBlock)(NSString *result);
 typedef void(^failBlock)(NSString *result, BGPayError *error);
@@ -43,28 +44,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param failBlock         支付结果回调Block
  */
 + (void)getPayOrderWithAppId:(NSString *)appId andMchId:(NSString *)mchId andOutTradeNo:(NSString *)outTradeNo success: (successBlock)successBlock failed: (failBlock)failBlock;
-
-    
-/**
- *  提现接口
- *
- *  @param withDraw           订单模型
- *  @param successBlock       支付结果回调Block
- *  @param failBlock          支付结果回调Block
- */
-+ (void)withDraw:(BGWithDraw *)withDraw success: (successBlock)successBlock failed: (failBlock)failBlock;
-
-/**
- *  查询提现订单状态接口
- *
- *  @param appId             应用ID
- *  @param mchId             商户号
- *  @param outTradeNo        商户订单号
- *  @param successBlock      支付结果回调Block
- *  @param failBlock         支付结果回调Block
- */
-+ (void)getWithDrawWithAppId:(NSString *)appId andMchId:(NSString *)mchId andOutTradeNo:(NSString *)outTradeNo success: (successBlock)successBlock failed: (failBlock)failBlock;
-
     
 @end
 

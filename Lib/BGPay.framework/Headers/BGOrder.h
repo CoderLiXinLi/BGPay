@@ -15,18 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) NSString *appId;
  /// NOTE:商户号
 @property(nonatomic,copy) NSString *mchId;
-/// NOTE:随机字符串
-@property(nonatomic,copy) NSString *nonceStr;
-/// NOTE:商户订单号
-@property(nonatomic,copy) NSString *outTradeNo;
 /// NOTE:总金额
-@property(nonatomic,copy) NSString *totalFee;
-/// NOTE:签名信息
-@property(nonatomic,copy) NSString *sign;
-/// NOTE:通知地址
-@property(nonatomic,copy) NSString *notifyUrl;
+@property(nonatomic,copy) NSString *cipherText;
     
-+ (instancetype)orderWithAppId:(NSString *)appId andMchId:(NSString *)mchId andNonceStr:(NSString *)nonceStr andOutTradeNo:(NSString *)outTradeNo andTotalFee:(NSString *)totalFee andSign:(NSString *)sign andNotifyUrl:(NSString *)notifyUrl;
++ (instancetype)orderWithAppId:(NSString *)appId andMchId:(NSString *)mchId andCipherText:(NSString *)cipherText;
     
 @end
 

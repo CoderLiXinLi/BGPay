@@ -22,9 +22,9 @@
     if ([url.host isEqualToString:@"BigoClient"]) {
         //TODO:此处处理回调结果
         NSLog(@"此处处理回调结果");
-        NSString *appId = @"1056362713403392002";
-        NSString *mchId = @"123456789";
-        NSString *outTradeNo = @"201812031530292177781207011";
+        NSString *appId = @"1084695898372562946";
+        NSString *mchId = @"980822476815695873";
+        NSString *outTradeNo = @"bg201812031530292177781207020";
         
         [BGPay getPayOrderWithAppId:appId andMchId:mchId andOutTradeNo:outTradeNo success:^(NSString *result) {
             NSLog(@"%@",result);

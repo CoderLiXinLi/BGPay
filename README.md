@@ -14,7 +14,6 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 **最低支持版本**
 -  iOS >= 8.0
 
-## Installation
 ### Installation with CocoaPods
 BGPaySDK is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -24,12 +23,16 @@ pod 'BGPay'
 ```
 ### Manually
 下载依赖库[地址](https://github.com/CoderLiXinLi/BGPay/tree/master/Lib "依赖库地址").
-```ruby
-需要添加下面两个依赖库到 Embedded Binaries
-```
+
 **依赖framework：**
-- AFNetworking.framework
+- AFNetworking.framework(.a)
 - BGPay.framework
+
+```ruby
+BGPay.framework AFNetworking.a 依赖到 Linked  Framework And Librarise
+注意:如果使用了AFNetworking.framework(动态库),需要将AFNetworking.framework 依赖到 Embedded Binaries.
+```
+
 
 ### 配置
 #### 生命周期
@@ -38,20 +41,19 @@ pod 'BGPay'
 
     if ([url.host isEqualToString:@"BigoClient"]) {
         //TODO:此处处理回调结果
-        NSLog(@"此处处理回调结果");
-        NSString *appId = @"1056362713403392002";
-        NSString *mchId = @"123456789";
-        NSString *outTradeNo = @"201812031530292177781207011";
-        
+        NSString *appId = @"1084695898372562946";
+        NSString *mchId = @"980822476815695873";
+        NSString *outTradeNo = @"bg201812031530292177781207016";
+
         [BGPay getPayOrderWithAppId:appId andMchId:mchId andOutTradeNo:outTradeNo success:^(NSString *result) {
-        NSLog(@"%@",result);
+            NSLog(@"%@",result);
         } failed:^(NSString *result, BGPayError *error) {
-        NSLog(@"%ld", (long)error.errorCode);
-        NSLog(@"%@",error.errorMessage);
+            NSLog(@"%ld", (long)error.errorCode);
+            NSLog(@"%@",error.errorMessage);
         }];
     }
 
-return YES;
+    return YES;
 }
 ```
 #### URL Schemes
@@ -70,6 +72,7 @@ LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 
 **参数：** 
 #### order
+##### V2.0版本之前
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
 |appId |是  |string |应用ID   |
@@ -79,6 +82,15 @@ LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 |totalFee        |是  |string | 总金额    |
 |notifyUrl       |否  |string | 通知地址    |
 |sign       |是 |  string | [签名算法](http://showdoc.bg.ink/web/#/14 "签名算法")    |
+
+##### V2.0版本之后
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|appId |是  |string |应用ID   |
+|mchId |是  |string | 商户号    |
+|cipherText       |是 |  string | [签名算法](http://showdoc.bg.ink/web/#/14 "签名算法")    |
+
+
 
 #### scheme
 |参数名|必选|类型|说明|
@@ -92,16 +104,16 @@ LSApplicationQueriesSchemes 白名单 添加 "BigoClient"
 |result  |String    |参数格式校验错误  |
 |error  |BGPayError    |错误信息  |
 
-
+##### V2.0版本之前
 ```ruby
-NSString *appId = @"1056362713403392003";
-NSString *mchId = @"1039540523250823273";
+NSString *appId = @"1084695898372562946";
+NSString *mchId = @"980822476815695873";
 NSString *nonceStr = @"123456789";
 NSString *outTradeNo = @"bgTest123456789";
 NSString *totalFee = @"10";
 NSString *notifyUrl = @"http://192.168.1.108:7076/pay/getOrder";
 /// 签名信息
-NSString *sign = @"C0B7FD10085EBCD065957B72E68CA1E6";
+NSString *sign = @"XXXX";
 
 BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andTotalFee:totalFee andSign:sign andNotifyUrl:notifyUrl];
 
@@ -112,55 +124,24 @@ BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andNonceStr:nonceS
     NSLog(@"%@",error.errorMessage);
 }];
 ```
-### 提现
 
-**应用场景：** 
-- 商户系统调用该接口在BG服务后台进行货币提现操作。
-
-**方法：**
-+ (void)withDraw:(BGWithDraw *)withDraw success: (successBlock)successBlock failed: (failBlock)failBlock;
-
-**参数：** 
-#### withDraw
-|参数名|必选|类型|说明|
-|:----    |:---|:----- |-----   |
-|appId |是  |string |应用ID   |
-|mchId |是  |string | 商户号    |
-|nonceStr        |是  |string | 随机字符串    |
-|outTradeNo        |是  |string | 商户订单号    |
-|phone       |是  |string | 手机号    |
-|countryCode       |是  |string | 国际电话区号    |
-|totalFee        |是  |string | 总金额    |
-|sign       |是 |  string | [签名算法](http://showdoc.bg.ink/web/#/14 "签名算法")    |
-
-**返回参数说明** 
-
-|参数名|类型|说明|
-|:-----  |:-----|-----                           |
-|result  |String    |参数格式校验错误  |
-|error  |BGPayError    |错误信息  |
-
-
+##### V2.0版本之后
 ```ruby
-NSString *appId = @"1056362713403392003";
-NSString *mchId = @"1039540523250823273";
-NSString *nonceStr = @"1234567890";
-NSString *outTradeNo = @"bgW123456789";
-NSString *totalFee = @"1.23";
-NSString *phone = @"18730160317";
-NSString *countryCode = @"+86";
+NSString *appId = @"1084695898372562946";
+NSString *mchId = @"980822476815695873";
 /// 签名信息
-NSString *sign = @"EF94B11B03D55D6AC916FCF3C5356E74";
+NSString *cipherText = @"XXXX";
 
-BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNonceStr:nonceStr andOutTradeNo:outTradeNo andPhone:phone andCountryCode:countryCode andTotalFee:totalFee andSign:sign];
+BGOrder *order = [BGOrder orderWithAppId:appId andMchId:mchId andCipherText:cipherText];
 
-[BGPay withDraw:withDraw success:^(NSString *result) {
+[BGPay payOrder:order scheme:@"OtherApp" success:^(NSString *result) {
     NSLog(@"%@",result);
 } failed:^(NSString *result, BGPayError *error) {
     NSLog(@"%ld", (long)error.errorCode);
     NSLog(@"%@",error.errorMessage);
 }];
 ```
+
 ### 支付结果查询
 
 **应用场景：** 
@@ -189,52 +170,11 @@ BGWithDraw *withDraw = [BGWithDraw withDrawWithAppId:appId andMchId:mchId andNon
 
 ```ruby
 
-NSString *appId = @"1056362713403392003";
-NSString *mchId = @"1039540523250823273";
-NSString *outTradeNo = @"bgW123456789";
+NSString *appId = @"1084695898372562946";
+NSString *mchId = @"980822476815695873";
+NSString *outTradeNo = @"bg201812031530292177781207016";
 
 [BGPay getPayOrderWithAppId:appId andMchId:mchId andOutTradeNo:outTradeNo success:^(NSString *result) {
-    NSLog(@"%@",result);
-} failed:^(NSString *result, BGPayError *error) {
-    NSLog(@"%ld", (long)error.errorCode);
-    NSLog(@"%@",error.errorMessage);
-}];
-```
-
-
-### 提现结果查询
-
-**应用场景：** 
-
-- 该接口提供第三方BG提现的结果查询，商户可以通过该接口主动查询提现状态，完成下一步的业务逻辑。
-
-**方法：**
-+ (void)getWithDrawWithAppId:(NSString *)appId andMchId:(NSString *)mchId andOutTradeNo:(NSString *)outTradeNo success: (successBlock)successBlock failed: (failBlock)failBlock;
-
-
-**参数：** 
-
-|参数名|必选|类型|说明|
-|:----    |:---|:----- |-----   |
-|appId |是  |string |应用ID   |
-|mchId |是  |string | 商户号    |
-|outTradeNo        |是  |string | 商户订单号    |
-
-**返回参数说明** 
-
-|参数名|类型|说明|
-|:-----  |:-----|-----                           |
-|return_code  |String    |此字段是通信标识，非交易标识，交易是否成功需要查看result_code（为0则是正确）来判断  |
-|return_msg  |String    |参数格式校验错误  |
-
-
-```ruby
-
-NSString *appId = @"1056362713403392003";
-NSString *mchId = @"1039540523250823273";
-NSString *outTradeNo = @"bgW123456789";
-
-[BGPay getWithDrawWithAppId:appId andMchId:mchId andOutTradeNo:outTradeNo success:^(NSString *result) {
     NSLog(@"%@",result);
 } failed:^(NSString *result, BGPayError *error) {
     NSLog(@"%ld", (long)error.errorCode);
