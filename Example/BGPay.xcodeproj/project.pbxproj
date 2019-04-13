@@ -303,7 +303,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BGPay_Example/Pods-BGPay_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BGPay_Example/Pods-BGPay_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -314,7 +314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BGPay_Example/Pods-BGPay_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BGPay_Example/Pods-BGPay_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3E42DEF7339B7B5991FB904F /* [CP] Check Pods Manifest.lock */ = {

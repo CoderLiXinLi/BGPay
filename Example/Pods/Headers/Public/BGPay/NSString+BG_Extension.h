@@ -1,1 +1,0 @@
-../../../../../BGPay/Classes/Headers/NSString+BG_Extension.h
