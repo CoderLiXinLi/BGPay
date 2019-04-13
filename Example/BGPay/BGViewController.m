@@ -27,7 +27,7 @@
 
 - (IBAction)orderClick:(UIButton *)sender
 {
-    NSString *pubkey = @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDsRajSERYUXn/t5N2ZB/5kH4Duu0aG9kigYIW76nGauOGytwJ5IWG2uV9+52Lj8YZtKNPMMF6je3acA4Q4waT57owKqb4Q0s7AvsACEG6VzqpUhgD66xbrbnejnGwvL1dxU3p4ZXOhh+sws6weoUKqjDRWT574fWHMvZkWZjsAhwIDAQAB";
+    NSString *pubkey = @"XXXX";
     
     NSString *appId = @"1084695898372562946";
     NSString *mchId = @"980822476815695873";
@@ -39,7 +39,7 @@
     NSDictionary *param = [[NSDictionary alloc] initWithObjectsAndKeys:appId, @"appId",mchId, @"mchId",nonceStr, @"nonceStr",outTradeNo, @"outTradeNo",totalFee, @"totalFee",notifyUrl, @"notifyUrl", nil];
     
     /// 签名信息
-    NSString *key = @"LKMHSF8WGC4FW";
+    NSString *key = @"XXXX";
     NSString *parmStr = [BGRSATool getParam:param];
     NSString *keySign = [NSString stringWithFormat:@"%@key=%@",parmStr,key];
     NSString *signMd5 = [[BGRSATool md5WithStr:keySign] uppercaseString];
